@@ -16,13 +16,13 @@
 }
 
 #icesheet-poly {
-  [zoom >= 5] {
+  [zoom >= 8] {
     polygon-fill: @glacier;
   }
 }
 
 #icesheet-outlines {
-  [zoom >= 5] {
+  [zoom >= 8] {
     [ice_edge = 'ice_ocean'],
     [ice_edge = 'ice_land'] {
       line-width: 0.375;

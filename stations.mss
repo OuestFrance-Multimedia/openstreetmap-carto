@@ -1,4 +1,4 @@
-@station-color: #7981b0;
+@station-color: #0ca2e5;
 @station-text: darken(saturate(@station-color, 15%), 10%);
 
 #stations {
@@ -20,16 +20,13 @@
     }
   }
 
-  [railway = 'station'][zoom >= 12] {
+  [railway = 'station'][zoom >= 14] {
     marker-file: url('symbols/square.svg');
     marker-placement: interior;
     marker-fill: @station-color;
+    marker-width: 4;
     marker-clip: false;
-    [station != 'subway'] {
-      marker-width: 4;
-    }
-    [zoom >= 13][station != 'subway'],
-    [zoom >= 14][station = 'subway'] {
+    [zoom >= 13] {
       marker-width: 6;
     }
     [zoom >= 14] {
@@ -104,7 +101,7 @@
   }
 
   [railway = 'tram_stop'] {
-    [zoom >= 14] {
+    [zoom >= 13] {
       marker-file: url('symbols/square.svg');
       marker-placement: interior;
       marker-fill: @station-color;
